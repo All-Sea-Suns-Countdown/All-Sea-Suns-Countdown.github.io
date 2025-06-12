@@ -13,10 +13,6 @@
         .body-font {
             font-family: 'Comfortaa', cursive;
         }
-        .palm-tree {
-            animation: sway 4s infinite alternate ease-in-out;
-            transform-origin: bottom;
-        }
         .wave {
             animation: wave 3s infinite;
         }
@@ -44,26 +40,7 @@
 </head>
 <body class="bg-gradient-to-b from-blue-400 to-teal-400 min-h-screen body-font flex flex-col items-center justify-center p-4 relative overflow-hidden">
     <!-- Palm Trees -->
-    <div class="absolute left-4 bottom-0 hidden md:block">
-        <svg class="palm-tree h-40 w-auto text-green-700" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M256 0c-79.5 0-144 64.5-144 144s64.5 144 144 144 144-64.5 144-144S335.5 0 256 0zm0 256c-61.9 0-112-50.1-112-112S194.1 32 256 32s112 50.1 112 112-50.1 112-112 112z"/>
-            <path fill="currentColor" d="M423.4 44.6c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6c16.4 16.4 25.4 38.1 25.4 61.3s-9 44.9-25.4 61.3c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0c21.9-21.9 33.9-51 33.9-83.9s-12-62-33.9-83.9z"/>
-            <path fill="currentColor" d="M111.2 67.2c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6c16.4 16.4 25.4 38.1 25.4 61.3s-9 44.9-25.4 61.3c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0c21.9-21.9 33.9-51 33.9-83.9s-12-62-33.9-83.9z"/>
-            <path fill="currentColor" d="M497.8 241.8c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6c16.4 16.4 25.4 38.1 25.4 61.3s-9 44.9-25.4 61.3c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0c21.9-21.9 33.9-51 33.9-83.9s-12-62-33.9-83.9z"/>
-            <path fill="currentColor" d="M36.8 264.4c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6c16.4 16.4 25.4 38.1 25.4 61.3s-9 44.9-25.4 61.3c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0c21.9-21.9 33.9-51 33.9-83.9s-12-62-33.9-83.9z"/>
-            <path fill="currentColor" d="M256 208c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48z"/>
-        </svg>
-    </div>
-    <div class="absolute right-4 bottom-0 hidden md:block">
-        <svg class="palm-tree h-40 w-auto text-green-700" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M256 0c-79.5 0-144 64.5-144 144s64.5 144 144 144 144-64.5 144-144S335.5 0 256 0zm0 256c-61.9 0-112-50.1-112-112S194.1 32 256 32s112 50.1 112 112-50.1 112-112 112z"/>
-            <path fill="currentColor" d="M423.4 44.6c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6c16.4 16.4 25.4 38.1 25.4 61.3s-9 44.9-25.4 61.3c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0c21.9-21.9 33.9-51 33.9-83.9s-12-62-33.9-83.9z"/>
-            <path fill="currentColor" d="M111.2 67.2c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6c16.4 16.4 25.4 38.1 25.4 61.3s-9 44.9-25.4 61.3c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0c21.9-21.9 33.9-51 33.9-83.9s-12-62-33.9-83.9z"/>
-            <path fill="currentColor" d="M497.8 241.8c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6c16.4 16.4 25.4 38.1 25.4 61.3s-9 44.9-25.4 61.3c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0c21.9-21.9 33.9-51 33.9-83.9s-12-62-33.9-83.9z"/>
-            <path fill="currentColor" d="M36.8 264.4c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6c16.4 16.4 25.4 38.1 25.4 61.3s-9 44.9-25.4 61.3c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0c21.9-21.9 33.9-51 33.9-83.9s-12-62-33.9-83.9z"/>
-            <path fill="currentColor" d="M256 208c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48z"/>
-        </svg>
-    </div>
+
 
     <!-- Sun - Now positioned differently for mobile -->
     <div class="absolute top-4 right-4 md:top-8 md:right-8">
