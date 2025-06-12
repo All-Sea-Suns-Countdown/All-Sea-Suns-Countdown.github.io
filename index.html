@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to All-Sea-Suns Vacation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .title-font {
+            font-family: 'Pacifico', cursive;
+        }
+        .wave {
+            animation: wave 3s infinite;
+        }
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            75% { transform: rotate(-10deg); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-blue-100 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="max-w-2xl w-full bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-400 to-teal-400 p-8 text-center">
+            <h1 class="title-font text-4xl md:text-5xl text-white mb-2">All-Sea-Suns Getaway</h1>
+            <div class="flex items-center justify-center">
+                <svg class="w-8 h-8 wave text-yellow-300 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                </svg>
+                <h2 class="text-xl md:text-2xl font-semibold text-blue-50">Countdown to Sandbridge</h2>
+            </div>
+        </div>
+        
+        <div class="p-8 text-center">
+            <div class="grid grid-cols-4 gap-4 mb-8">
+                <div class="bg-blue-50 rounded-lg p-4 shadow">
+                    <div id="days" class="text-4xl font-bold text-blue-600">00</div>
+                    <div class="text-blue-500 uppercase text-sm mt-2">Days</div>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-4 shadow">
+                    <div id="hours" class="text-4xl font-bold text-blue-600">00</div>
+                    <div class="text-blue-500 uppercase text-sm mt-2">Hours</div>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-4 shadow">
+                    <div id="minutes" class="text-4xl font-bold text-blue-600">00</div>
+                    <div class="text-blue-500 uppercase text-sm mt-2">Minutes</div>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-4 shadow">
+                    <div id="seconds" class="text-4xl font-bold text-blue-600">00</div>
+                    <div class="text-blue-500 uppercase text-sm mt-2">Seconds</div>
+                </div>
+            </div>
+            
+            <p class="text-gray-600 mb-6">We're counting down to your arrival at All-Sea-Suns in beautiful Sandbridge!</p>
+            
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 text-left rounded">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-yellow-700">
+                            Target date: <span class="font-semibold">July 26, 2024 at 12:00 PM</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-gray-50 px-8 py-6 text-center">
+            <p class="text-gray-500 text-sm">Pack your bags and get ready for sun, sand, and relaxation!</p>
+        </div>
+    </div>
+
+    <script>
+        // Set the date we're counting down to (July 26, 2024 at 12:00 PM)
+        const countDownDate = new Date("July 26, 2024 12:00:00").getTime();
+
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            // Get today's date and time
+            const now = new Date().getTime();
+            
+            // Find the distance between now and the countdown date
+            const distance = countDownDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the result
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            
+            // If the countdown is finished, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                
+                // You could replace the countdown with a celebration message
+                // document.querySelector(".text-center p").innerHTML = "🎉 Time to leave for All-Sea-Suns! 🎉";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
